@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "chromedriver": "^74.0.0",
-    "nightwatch": "^1.0.19"
+    "nightwatch": "^1.0.19",
+    "pug": "^2.0.3"
   }
 }
