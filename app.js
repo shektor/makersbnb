@@ -1,6 +1,21 @@
 const express = require('express')
 const app = express()
 const port = 4567
+var bodyParser = require('body-parser')
+
+function Space() {
+  this.name
+  this.description
+  this.price
+}
+
+var space = new Space()
+
+var jsonParser = bodyParser.json()
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+
 
 app.set('view engine', 'pug')
 
@@ -8,8 +23,15 @@ app.get('/', (req, res) => res.redirect('/spaces'))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
-app.get('/spaces', (req, res) => res.render('index', { title: "Spaces", message: "Book a Space", button: "List a Space" }))
+app.get('/spaces', (req, res) => res.render('spaces/index', { button: "List a Space", space: space }))
+// name: name, description: description, price: price
 
-app.get('/spaces/new', (req, res) => res.render('new', { message: "List your Space" }))
+app.get('/spaces/new', (req, res) => res.render('spaces/new', { message: "List your Space" }))
 
-app.post('/spaces', (req, res) => res.redirect('/spaces'))
+
+app.post('/spaces', urlencodedParser, (req, res) => {
+  space.name = req.body.name
+  space.description = req.body.description
+  space.price = req.body.price
+  res.redirect('/spaces')
+})

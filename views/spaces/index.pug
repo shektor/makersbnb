@@ -2,5 +2,8 @@ html
   head
     title= title
   body
-    h1= message
+    h1= "Book a Space"
     a(class='list-direct' href='/spaces/new')= button
+    h2= space.name
+    h2= space.description
+    h2= space.price
