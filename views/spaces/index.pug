@@ -4,6 +4,12 @@ html
   body
     h1= "Book a Space"
     a(class='list-direct' href='/spaces/new')= button
-    h2= space.name
-    h2= space.description
-    h2= space.price
+    //- - var spaces = []
+    ul
+      each space in spaces.length ? spaces : ['There are no spaces available'] 
+        label New Listing
+        li= space.name
+        li= space.description
+        li= space.price
+        
+
