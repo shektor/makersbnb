@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 4567
-const Space = require('./space')
+const Space = require('./src/space')
 var bodyParser = require('body-parser')
 var spaces = []
 
