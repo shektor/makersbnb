@@ -2,9 +2,11 @@ module.exports = {
   'List a new space'(browser) {
     browser
       .url('localhost:4567/')
-      .waitForElementVisible('list-direct')
-      .click('list-direct')
+      // /spaces
+      .waitForElementVisible('.list-direct')
+      .click('.list-direct')
+      // /spaces/new
       .waitForElementVisible('body')
-      .assert.containsText('body', 'List a Space')
+      .assert.containsText('body', 'List your Space')
   }
 }
