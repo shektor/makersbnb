@@ -1,21 +1,21 @@
 const express = require('express')
 const app = express()
 const port = 4567
+const Space = require('./space')
 var bodyParser = require('body-parser')
 
-function Space() {
-  this.name
-  this.description
-  this.price
-}
+// function Space() {
+//   this.name
+//   this.description
+//   this.price
+// }
 
-var space = new Space()
 
 var jsonParser = bodyParser.json()
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-
+var space = new Space()
 
 app.set('view engine', 'pug')
 
