@@ -11,3 +11,5 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 app.get('/spaces', (req, res) => res.render('index', { title: "Spaces", message: "Book a Space", button: "List a Space" }))
 
 app.get('/spaces/new', (req, res) => res.render('new', { message: "List your Space" }))
+
+app.post('/spaces', (req, res) => res.redirect('/spaces'))
