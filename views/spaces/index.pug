@@ -6,10 +6,11 @@ html
     a(class='list-direct' href='/spaces/new')= button
     //- - var spaces = []
     ul
-      each space in spaces.length ? spaces : ['There are no spaces available'] 
-        label New Listing
-        li= space.name
-        li= space.description
-        li= space.price
-        
-
+      if spaces.length == 1
+        h2= "There are no spaces available"
+      else
+        each space in spaces
+          label New Listing
+          li= space.name
+          li= space.description
+          li= space.price

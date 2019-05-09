@@ -5,9 +5,9 @@
 
   <testsuite name="listSpec"
     errors="0" failures="0" hostname="" id="" package="listSpec" skipped="0"
-    tests="1" time="0.5170" timestamp="">
+    tests="1" time="0.4990" timestamp="">
   
-    <testcase name="List a new space" classname="listSpec" time="0.5170" assertions="3">
+    <testcase name="List a new space" classname="listSpec" time="0.4990" assertions="3">
 
     
 

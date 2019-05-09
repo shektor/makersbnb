@@ -1,13 +1,19 @@
 class Space {
 
   static all() {
-    return ["Castle Black", "John Snow is here", "1 arm"]
+    return spaces
+  }
+
+  static add(name, description, price) {
+    var space = new Space(name, description, price)
+    spaces.push(space)
+    return space
   }
 
   constructor (name, description, price){
-    this.name
-    this.description
-    this.price
+    this.name = name
+    this.description = description
+    this.price = price
   }
 
 }
@@ -15,3 +21,5 @@ class Space {
 // (module || {}).exports = Space;
 // export module all();
 module.exports = Space
+var aSpace = new Space("Castle Black", "John Snow is here", "1 arm")
+var spaces = [aSpace];

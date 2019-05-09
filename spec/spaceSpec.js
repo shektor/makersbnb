@@ -1,14 +1,17 @@
 const Space = require('../src/space')
-//
-// module.exports = {
-//   'returns all spaces'(Space) {
-//     spaces = Spaces.all()
-//   }
-// }
+
 describe('Space', function(){
-  it('returns all spaces', function(){
-    spaces = Space.all()
-    expect(spaces).toEqual(["Castle Black", "John Snow is here", "1 arm"])
-  });
-  // Space.add("Castle Black", "John Snow is here", "1 arm");
-});
+  describe('.all', function() {
+    it('returns all spaces', function(){
+      var aSpace = new Space("Castle Black", "John Snow is here", "1 arm")
+      spaces = Space.all()
+      expect(spaces).toContain(aSpace)
+    })
+  })
+  describe('.add', function() {
+    it('adds to the spaces array', function() {
+      var anotherSpace = Space.add("Castle Blue", "John Snow is not here", "5 arms")
+      expect(Space.all()).toContain(anotherSpace)
+    })
+  })
+})

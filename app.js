@@ -26,17 +26,13 @@ app.get('/', (req, res) => res.redirect('/spaces'))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
-app.get('/spaces', (req, res) => res.render('spaces/index', { button: "List a Space", spaces: spaces }))
+app.get('/spaces', (req, res) => res.render('spaces/index', { button: "List a Space", spaces: Space.all() }))
 // name: name, description: description, price: price
 
 app.get('/spaces/new', (req, res) => res.render('spaces/new', { message: "List your Space" }))
 
 
 app.post('/spaces', urlencodedParser, (req, res) => {
-  var space = new Space()
-  space.name = req.body.name
-  space.description = req.body.description
-  space.price = req.body.price
-  spaces.push(space)
+  Space.add(req.body.name, req.body.description, req.body.price)
   res.redirect('/spaces')
 })
