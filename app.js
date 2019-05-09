@@ -4,6 +4,17 @@ const port = 4567
 const Space = require('./src/space')
 var bodyParser = require('body-parser')
 var spaces = []
+// DB 
+var pg = require('pg')
+// var connectionString = "postgres://MaxRobertsDear:@postgresql/ip:5432/MakersBNB"
+var pgClient = new pg.Client({
+  host: 'localhost', 
+  port: 5432, 
+  user: 'MaxRobertsDear', 
+  database: 'MakersBNB'
+})
+pgClient.connect()
+
 //
 // ES6 version of require
 // import Space from './src/space'

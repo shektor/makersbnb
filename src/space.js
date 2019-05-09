@@ -23,3 +23,9 @@ class Space {
 module.exports = Space
 var aSpace = new Space("Castle Black", "John Snow is here", "1 arm")
 var spaces = [aSpace];
+
+// NB: to be implemented
+// var query;
+// pgClient.query('select * from spaces', (err, res) => {
+//   query = res.rows[0]
+// });
