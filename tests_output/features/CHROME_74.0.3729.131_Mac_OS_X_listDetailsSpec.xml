@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
+            failures="0"
             tests="1">
 
   <testsuite name="features.listDetailsSpec"
-    errors="0" failures="1" hostname="" id="" package="features" skipped="0"
-    tests="1" time="2.344" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="features" skipped="0"
+    tests="1" time="0.7680" timestamp="">
   
-    <testcase name="Add a name, short desciption and a price to the space" classname="features.listDetailsSpec" time="2.344" assertions="2">
+    <testcase name="Add a name, short desciption and a price to the space" classname="features.listDetailsSpec" time="0.7680" assertions="4">
 
-      <failure message="Testing if element &lt;body&gt; contains text: &#34;Castle Black&#34; in 1000 ms. - expected [0;32m&#34;Castle Black&#34;[0m but got: [0;31m&#34;TypeError: Cannot read property &#39;name&#39; of undefined
-    at app.post (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/app.js:23:19)
-    at Layer.handle [as handle_request] (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/layer.js:95:5)
-    at next (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/layer.js:95:5)
-    at /Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/index.js:335:12)
-    at next (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/index.js:275:10)
-    at expressInit (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/middleware/init.js:40:5)
-    at Layer.handle [as handle_request] (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/node_modules/express/lib/router/layer.js:95:5)&#34;[0m">    at Object.Add a name, short desciption and a price to the space (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/spec/features/listDetailsSpec.js:10:15)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    
 
-    <failure message="    at Object.Add a name, short desciption and a price to the space (/Users/student/Projects/Makers/week-6/makersbnb/makersbnb/spec/features/listDetailsSpec.js:10:15)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    
+
+    
+
+    
     </testcase>
   
 

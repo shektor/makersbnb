@@ -4,6 +4,9 @@ const port = 4567
 const Space = require('./src/space')
 var bodyParser = require('body-parser')
 var spaces = []
+//
+// ES6 version of require
+// import Space from './src/space'
 
 // function Space() {
 //   this.name
