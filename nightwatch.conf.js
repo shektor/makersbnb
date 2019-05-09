@@ -1,5 +1,5 @@
 module.exports = {
-  "src_folders" : ["spec"],
+  "src_folders" : ["spec/features"],
 
   "webdriver" : {
     "start_process": true,
