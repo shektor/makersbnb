@@ -1,6 +1,7 @@
-html
-  head
-  body
+extends layout
+
+block content
+  div(class='container')
     h1= message
     form(method='POST' action='/spaces')
       div.form-group
@@ -12,4 +13,4 @@ html
       div.form-group
         label(for='price') Price:
         input#price.form-control(type="text", placeholder="price per night", name="price")
-      button.btn.btn-primary.post-space(type="submit") List my Space
+      button.btn.btn-primary.post-space(type="submit" class='button button-primary') List my Space

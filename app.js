@@ -4,13 +4,13 @@ const port = 4567
 const Space = require('./src/space')
 var bodyParser = require('body-parser')
 var spaces = []
-// DB 
+// DB
 var pg = require('pg')
 // var connectionString = "postgres://MaxRobertsDear:@postgresql/ip:5432/MakersBNB"
 var pgClient = new pg.Client({
-  host: 'localhost', 
-  port: 5432, 
-  user: 'MaxRobertsDear', 
+  host: 'localhost',
+  port: 5432,
+  user: 'MaxRobertsDear',
   database: 'MakersBNB'
 })
 pgClient.connect()
@@ -30,6 +30,7 @@ var jsonParser = bodyParser.json()
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'pug')
 
