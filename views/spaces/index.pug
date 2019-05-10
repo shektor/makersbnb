@@ -1,16 +1,21 @@
-html
-  head
-    title= title
-  body
+extends layout
+
+block content
+  div(class='container')
     h1= "Book a Space"
-    a(class='list-direct' href='/spaces/new')= button
-    //- - var spaces = []
-    ul
-      if spaces.length == 1
-        h2= "There are no spaces available"
-      else
-        each space in spaces
-          label New Listing
-          li= space.name
-          li= space.description
-          li= space.price
+    a(class='list-direct' href='/spaces/new' class='button button-primary')= button
+    if spaces.length == 1
+      h2= "There are no spaces available"
+    else
+      table(class="u-full-width")
+        thead
+          tr
+            th= "Name"
+            th= "Description"
+            th= "Price"
+        tbody
+          each space in spaces
+            tr
+              td= space.name
+              td= space.description
+              td= space.price
