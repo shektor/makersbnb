@@ -1,30 +1,24 @@
-var pg = require('pg')
+const { Client } = require('pg')
 // var connectionString = "postgres://MaxRobertsDear:@postgresql/ip:5432/MakersBNB"
-var pgClient = new pg.Client({
+const client = new Client({
   host: 'localhost', 
   port: 5432, 
   user: 'MaxRobertsDear', 
   database: 'MakersBNB'
 })
-// pgClient.connect()
-
-
+client.connect()
 
 
 class Space {
 
   static all() {
     var query;
-    pgClient.connect()
-    pgClient.query('select * from spaces', (err, res) => {
-      if (err) {
-        console.log("connection didn't work")
-      } else {
-        query = (res.fields.map(f => field.name))
-        }
-
+    client.query('select * from spaces', (err, res) => {
+      query = res
+      console.log(query.title)
+      return query.title
+      client.end()
     })
-    return query
   }
 
   static add(name, description, price) {
@@ -40,6 +34,7 @@ class Space {
   }
 
 }
+
 
 // (module || {}).exports = Space;
 // export module all();

@@ -8,6 +8,7 @@ describe('Space', function(){
       expect(spaces).toContain(aSpace)
     })
   })
+
   // describe('.add', function() {
   //   it('adds to the spaces array', function() {
   //     var anotherSpace = Space.add("Castle Blue", "John Snow is not here", "5 arms")
