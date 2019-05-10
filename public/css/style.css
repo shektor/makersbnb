@@ -5,6 +5,7 @@
 
 .container {
   text-align: center;
+  color: white;
 }
 
 .forest {
@@ -23,4 +24,68 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+width: 100%;
+height: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  }
+
+.hero::before {
+  background-image: url("https://images.unsplash.com/photo-1541959833400-049d37f98ccd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.4;
+  }
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  }
+
+.hero-message {
+  color: #fff;
+  text-shadow: #343a40 2px 2px;
+  min-width: 100%;
+  min-height: 12em;
+  position: relative;
+  }
+
+.hero-message::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-left: 0;
+  min-width: 100%;
+  min-height: 34em;
+  z-index: -1;
+  opacity: 0.4;
+  background-color: #343a40;
+  }
+
+.input-colour {
+  color: black;
 }

@@ -1,19 +1,20 @@
 extends layout
 
 block content
-  div(class='container')
-    br
-    br
-    br
-    h1= message
-    form(method='POST' action='/spaces')
-      div.form-group
-        label(for='name') Name:
-        input#name.form-control(type="text", placeholder="name of space", name="name")
-      div.form-group
-        label(for='description') Description:
-        input#description.form-control(type="text", placeholder="describe the space", name="description")
-      div.form-group
-        label(for='price') Price:
-        input#price.form-control(type="text", placeholder="price per night", name="price")
-      button.btn.btn-primary.post-space(type="submit" class='button button-primary') List my Space
+  div(class='container hero flex-center')
+    div(class='hero-message')
+      br
+      br
+      br
+      h1= message
+      form(method='POST' action='/spaces')
+        div.form-group
+          label(for='name') Name:
+          input#name.form-control(type="text", placeholder="name of space", name="name", class='input-colour')
+        div.form-group
+          label(for='description') Description:
+          input#description.form-control(type="text", placeholder="describe the space", name="description", class='input-colour')
+        div.form-group
+          label(for='price') Price:
+          input#price.form-control(type="text", placeholder="price per night", name="price", class='input-colour')
+        button.btn.btn-primary.post-space(type="submit" class='button button-primary') List my Space
