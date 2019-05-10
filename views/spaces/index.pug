@@ -1,12 +1,20 @@
 extends layout
 
 block content
-  div(class='container')
-    h1= "Book a Space"
+  div(class='forest')
+    br
+    br
+    br
+    br
+    h1(class='header')= "Book a Space" 
     a(class='list-direct' href='/spaces/new' class='button button-primary')= button
+  div(class='list')
+    br
+  
     if spaces.length == 1
       h2= "There are no spaces available"
     else
+      h1= "Our beautiful homes"
       table(class="u-full-width")
         thead
           tr
