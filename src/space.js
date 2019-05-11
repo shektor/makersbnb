@@ -1,24 +1,31 @@
 const { Client } = require('pg')
 // var connectionString = "postgres://MaxRobertsDear:@postgresql/ip:5432/MakersBNB"
 const client = new Client({
-  host: 'localhost', 
-  port: 5432, 
-  user: 'MaxRobertsDear', 
+  host: 'localhost',
+  port: 5432,
+  // user: 'MaxRobertsDear',
   database: 'MakersBNB'
 })
-client.connect()
 
+client.connect()
 
 class Space {
 
-  static all() {
-    var query;
+  static clearSpaces() {
+    spaces = []
+  }
+
+  static getAllSpaces() {
     client.query('select * from spaces', (err, res) => {
-      query = res
-      console.log(query.title)
-      return query.title
-      client.end()
+      res.rows.forEach(function(row) {
+        var space = new Space(row.title, row.description, row.price)
+        spaces.push(space)
+      })
     })
+  }
+
+  static returnSpaces(spaces) {
+    return spaces
   }
 
   static add(name, description, price) {
@@ -40,7 +47,7 @@ class Space {
 // export module all();
 module.exports = Space
 // var aSpace = new Space("Castle Black", "John Snow is here", "1 arm")
-// var spaces = [aSpace];
+var spaces = [];
 
 // NB: to be implemented
 // var query;
