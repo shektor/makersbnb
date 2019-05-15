@@ -1,5 +1,10 @@
 # Makersbnb
 
+### Usage
+
+1. `$node app.js` to launch server
+2. [Navigate to localhost:4567 in browser](http://localhost:4567/)
+
 ## Headline specifications
 - Any signed-up user can list a new space.
 - Users can list multiple spaces.
