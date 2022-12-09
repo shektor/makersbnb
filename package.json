@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/shektor/makersbnb#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "pg": "^7.10.0"
   },
   "devDependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "chromedriver": "^74.0.0",
     "nightwatch": "^1.0.19",
     "pug": "^2.0.3"
